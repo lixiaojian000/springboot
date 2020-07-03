@@ -1,0 +1,27 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://rm-bp1j39nmobx9kzz96uo.mysql.rds.aliyuncs.com/jpa
+    username: lixiaojian
+    password: Zmj@147258
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+#     更新或者创建数据表
+      ddl-auto: update
+    show-sql: true
+  redis:
+    database: 0
+    host: 121.196.42.116
+    port: 6379
+    password: LI021021
+    jedis:
+      pool:
+        max-active: 10
+        max-wait: -1
+        max-idle: 10
+        min-idle: 0
+      timeout: 10000
+
+server:
+  port: 8099
