@@ -42,7 +42,7 @@ public class ShrioConfig {
         //游客访问时的路径
         //filterChainDefinitionMap.put("/web/getAll","anon");
         //用户，需要角色权限”user“
-        filterChainDefinitionMap.put("/web/getAlQ","roles[管理员]");
+        //filterChainDefinitionMap.put("/web/getAlQ","roles[管理员]");
         //开放登录的接口
         filterChainDefinitionMap.put("/web/login","anon");
         //其余接口一律拦截

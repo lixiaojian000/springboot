@@ -67,7 +67,6 @@ public class helloController {
         }
         resultMap.put("code",200);
         resultMap.put("msg","登录成功");
-        resultMap.put("token",randomKey);
         JSONObject jsonObject=JSONObject.parseObject(JSON.toJSONString(resultMap));
         redisservice.set(randomKey,jsonObject.toString(),3600L);
         tokenSubjectUtil.saveSubject(randomKey, subject);

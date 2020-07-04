@@ -13,10 +13,10 @@ import java.io.IOException;
 public class noSessionFilter extends BasicHttpAuthenticationFilter {
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
-        System.out.println("isAccessAllowed");
+        System.out.println("jwt");
         HttpServletRequest httpServletRequest=(HttpServletRequest) request;
         System.out.println(httpServletRequest.getServletPath());
-        String token=httpServletRequest.getParameter("token");
+        String token = httpServletRequest.getHeader("token");
         System.out.println(token);
         Subject subject= TokenSubjectUtil.getSubject(token);
         if(subject==null){
